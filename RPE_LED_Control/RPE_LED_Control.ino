@@ -6,10 +6,11 @@
 #define Button 2
 #define Pot A0
 int n=0;
-int Values[2]={128,0};
+int Values[2]={0,0};
 void setup() {
   // put your setup code here, to run once:
-  //Serial.begin(9600);
+  //Serial.begin(9600); delay(500); Serial.println("Begin Setup"); //delay for serial begin
+
   pinMode(Button, INPUT_PULLUP);
   pinMode(Pot, INPUT);
 
@@ -23,6 +24,8 @@ void setup() {
 }
 
 void loop() {
+ //Serial.print("Outside programming mode, duty cycle is: "); Serial.println((float(Values[1])/255.0)) * 100; //Used for debugging duty cycle
+
  analogWrite(LEDArray1,Values[0]);
  analogWrite(LEDArray2,Values[1]);
  Values[n]=(analogRead(Pot)/4);
