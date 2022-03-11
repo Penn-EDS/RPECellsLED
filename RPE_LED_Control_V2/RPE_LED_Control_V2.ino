@@ -1,6 +1,6 @@
 // Purpose: This program can control 2 LEDs arrays through the digital pins
 // of the Arduino Nano. The Potenciometer will set the value of intensity of the
-// blue LEDS and the button will toggle between set and reset the intensity values.
+// blue LEDS and the button will toggle between fixed or adjustable intensity values.
 //
 // Author: Pedro Quijano
 // Date : March 10, 2022
